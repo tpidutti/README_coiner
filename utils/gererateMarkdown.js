@@ -19,5 +19,3 @@ function generateMarkdown(data) {
 
 module.exports = generateMarkdown;
 
-
-salskdsd;kfjsd;lfj
