@@ -8,7 +8,7 @@ inquirer
 .prompt( [
     {
         type: "input",
-        name: "projectTitle",
+        name: "title",
         message: "What is the title of your project?",
     },
     {
@@ -17,14 +17,14 @@ inquirer
         message: "How would you describe this project and its purpose?",
     },
     {
-        // type: "input",
+        type: "input",
         name: "installation",
-        message: "Dependencies, such as inquirer, can be installed with npm.", 
+        message: "How do you install this application?", 
     },
     {
-        // type: "input",
+        type: "input",
         name: "usage",
-        message: "This application can be uses by answering the prompt questions and enjoying the beauty of file creation.",
+        message: "What instructions for use would you like to include?",
     },
     {
         type: "checkbox",
@@ -34,12 +34,12 @@ inquirer
     {
         type: "input",
         name: "contribution",
-        choices: "This project was created by the author and is a demo project.",
+        choices: "How can you contribute to this application?",
     },
     {
         type: "input",
         name: "tests",
-        choices: "This is a demo project so there are no tests yet.",
+        choices: "What tests should be run on this application?",
     },
 ])
 .then((response) => {
@@ -49,29 +49,3 @@ inquirer
     );
 })
 
-
-// const fileName = `${title}`
-// TODO: Create a function to write README file
-// function writeToFile(fileName, generateMarkdown) {
-    
-
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {
-// inquirer.prompt(questions)
-// .then(answers) = {
-//     const pageContent = generateMarkdown(answers);
-// }
-// fs.writeFile(README.md, generateMarkdown, (err)=>{
-//     if(err){
-//         console.log(error);
-//     }else{
-//         console.log("README.md was created.");
-//     }
-// }) 
-// };
-
-
-// // Function call to initialize app
-// init();

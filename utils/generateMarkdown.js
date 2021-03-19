@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// TODO: Create a function that returns a license badge based on which license is passed in.  If there is no license, return an empty string
 const badges = [
   "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
   "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
@@ -7,7 +6,6 @@ const badges = [
   "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
 ]
 function renderLicenseBadge(license) {
-// badges write to top of README file
 const licenseObject = {
   "Apache 2.0": badges[0],
   "BSD 3": badges[1],
@@ -18,9 +16,8 @@ const licenseObject = {
 return licenseObject[license]
 }
 
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({title, description, installation, usage,license}) {
+function generateMarkdown({title, description, installation, usage, license, contribution, tests}) {
   return `
   # ${title}
 
@@ -44,21 +41,19 @@ function generateMarkdown({title, description, installation, usage,license}) {
   *[Questions](#questions)
 
   ### Installation
-  // ${installation}
+  ${installation}
  
-
   ### Usage
-  // ${usage}
+  ${usage}
   
   ### License
   This project is licensed under ${license}.
 
   ### Contribution
-  
- 
+  ${contribution}
+
   ### Tests
-  
- 
+  ${tests}
 
   ## Questions
   Please contact me, Theresa, with any questions you might have about this project.  You can reach me at bountravel@hotmail.com or view more of my work at GitHub, [tpidutti](https://github.com/tpidutti).
@@ -66,7 +61,6 @@ function generateMarkdown({title, description, installation, usage,license}) {
   `;
   
 } 
-
 
 
 module.exports = generateMarkdown;
