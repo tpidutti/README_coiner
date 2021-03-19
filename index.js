@@ -1,10 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const connectMarkdownFl = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
-const questions = [
+inquirer
+.prompt( [
     {
         type: "input",
         name: "projectTitle",
@@ -16,19 +17,19 @@ const questions = [
         message: "How would you describe this project and its purpose?",
     },
     {
-        type: "input",
+        // type: "input",
         name: "installation",
-        message: "This is a demo file so does not need to be installed.",
+        message: "Dependencies, such as inquirer, can be installed with npm.", 
     },
     {
-        type: "input",
+        // type: "input",
         name: "usage",
         message: "This application can be uses by answering the prompt questions and enjoying the beauty of file creation.",
     },
     {
         type: "checkbox",
         name: "license",
-        choices: ["Apace 2.0", "BSD", "GPL", "MIT", "none"],
+        choices: ["Apache 2.0", "BSD 3", "GPL 3.0", "MIT", "none"],
     },
     {
         type: "input",
@@ -40,38 +41,37 @@ const questions = [
         name: "tests",
         choices: "This is a demo project so there are no tests yet.",
     },
-]
+])
+.then((response) => {
+    const pageContent = generateMarkdown(response);
 
-// .then({
-//     title,
-//     description,
-//     intallation,
-//     usage,
-//     license,
-//     contribution,
-//     tests
-// });
+    fs.writeFile("README.md", pageContent, (err) => err ? console.log(err) : console.log("README.md was created.")
+    );
+})
 
 
-const fileName = title
+// const fileName = `${title}`
 // TODO: Create a function to write README file
-function writeToFile(fileName, generateMarkdown) {
-    fs.writeFile(fileName, data, (err)=>{
-        if(err){
-            console.log(error);
-        }else{
-            console.log("README.md was created.");
-        }
-    }) 
+// function writeToFile(fileName, generateMarkdown) {
+    
 
-}
+// }
+
+// // TODO: Create a function to initialize app
+// function init() {
+// inquirer.prompt(questions)
+// .then(answers) = {
+//     const pageContent = generateMarkdown(answers);
+// }
+// fs.writeFile(README.md, generateMarkdown, (err)=>{
+//     if(err){
+//         console.log(error);
+//     }else{
+//         console.log("README.md was created.");
+//     }
+// }) 
+// };
 
 
-// TODO: Create a function to initialize app
-function init() {
-inquirer.prompt(questions);
-}
-
-// Function call to initialize app
-init();
-
+// // Function call to initialize app
+// init();
