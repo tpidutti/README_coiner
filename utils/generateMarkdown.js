@@ -65,7 +65,7 @@ function generateMarkdown({title, description, intallation, usage, license, cont
   
 }
 
-console.log(generateMarkdown);
+
 
 module.exports = generateMarkdown;
 

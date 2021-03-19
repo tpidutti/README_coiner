@@ -42,20 +42,20 @@ const questions = [
     },
 ]
 
-.then({
-    title,
-    description,
-    intallation,
-    usage,
-    license,
-    contribution,
-    tests
-});
+// .then({
+//     title,
+//     description,
+//     intallation,
+//     usage,
+//     license,
+//     contribution,
+//     tests
+// });
 
 
-
+const fileName = title
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, generateMarkdown) {
     fs.writeFile(fileName, data, (err)=>{
         if(err){
             console.log(error);
