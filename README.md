@@ -24,18 +24,21 @@
   This is a demo.  Dependencies can be installed with npm i.
  
   ### Usage
-  This is a demo, answer the prompts and watch the file appear.
+  Answer the prompts and watch the file appear.
   
   ### License
   This project is licensed under MIT.
 
   ### Contribution
-  This is a demo, so not open for contributions at this time.
+  This is a demo so not open for contributions at this time.
 
   ### Tests
-  No tests have been set up for this demo.
+  There are no tests set up for this demo.
 
   ## Questions
   Please contact me, Theresa, with any questions you might have about this project.  You can reach me at bountravel@hotmail.com or view more of my work at GitHub, [tpidutti](https://github.com/tpidutti).
+
+  ##Video
+  (https://youtu.be/NlhSPxh1Isw)
 
   
